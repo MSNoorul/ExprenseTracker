@@ -15,6 +15,7 @@ function Reducer(state,action) {
           return newState
   
         case 'CLEAR':
+            localStorage.setItem('appState',JSON.stringify({ history: [], balance: 0 }))
           return {history:[],balance:0}
         case 'SET_STATES':
           return action.state
